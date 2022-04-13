@@ -348,7 +348,7 @@ for pulse in pulses[pulse_counter:]:
 		
 			
 		
-		#These are to find common range in which ALL probes record data
+		#Find common range in which ALL probes record data
 		t_hold=[0,0]
 		probe_tstarts=[]
 		probe_tstops=[]
