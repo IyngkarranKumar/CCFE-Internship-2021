@@ -1,3 +1,5 @@
+
+#%%
 """
 The purpose of this script is to set up a testing environment for accessing both UAE databases
 Examples of function use are provided below
@@ -75,3 +77,5 @@ if 1: ##DATABASE II - examples
 	
 	
 	
+
+# %%

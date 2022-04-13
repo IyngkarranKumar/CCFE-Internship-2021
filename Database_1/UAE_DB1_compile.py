@@ -6,9 +6,11 @@ The following scripts, and the accompanying ones provided in the folder Auxscrip
 compilation of a DATABASE I type file.
 
 """
+#%%
 
 
 if 1: ##IMPORT
+
 	import sys
 	sys.path[:0]=['/jet/share/lib/python'];
 	from ppf import *
@@ -1348,3 +1350,5 @@ print("\n\nDATABASE COMPILATION FINISHED")
 
 
 	
+
+# %%
