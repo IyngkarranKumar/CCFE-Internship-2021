@@ -6,10 +6,10 @@ Note from 13/04/22 - Currently in the process of refactoring code in this repo a
 
 ## Overview of this repository ##
 
-report.pdf - A written report of internship work
-Database_1 - Source code for compiling Database 1 (discussed briefly below)
-Database_2 - Source code for compiling Database 2 (discussed briefly below)
-Analysis - Source code for analysis of databases
+report.pdf - A written report of internship work <br>
+Database_1 - Source code for compiling Database 1 (discussed briefly below) <br>
+Database_2 - Source code for compiling Database 2 (discussed briefly below) <br>
+Analysis - Source code for analysis of databases <br>
 
 ### Database 1 ###
 
