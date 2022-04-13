@@ -6,6 +6,8 @@ Alex Tinguely 220405
 """
 
 if 1: ##IMPORT
+	import sys
+	sys.path.append("../")
 	import h5py as h5
 	import numpy as np
 	import pandas as pd
@@ -86,41 +88,28 @@ if 1: ### Plot ###
 	
 	x 		= g_se; 	xlabel 	= 'growth rate (end - start)';
 	x 		= g_sa; 	xlabel 	= 'growth rate (max - start)';
-		
+	
 	boolNaN = np.isnan(x);
 	boolInf = np.isinf(x);
 	boolTot = np.logical_and(~boolNaN,~boolInf);
 	bins 	= np.linspace(np.min(x[boolTot]),np.max(x[boolTot]),26);
 	bins 	= np.linspace(0,100,101);
 	
-	x 		= f_med; xlabel 	= 'f (kHz)'; bins 	= np.linspace(0,500,51);
-		
-	x 		= n; xlabel 	= 'n'; bins 	= np.arange(-1,10)-0.5;
-	x 		= m/n; xlabel 	= 'q=m/n'; bins 	= np.linspace(0.9,3.1,12);
+	fig 	= plt.figure();
+	alpha 	= 0.5;
 	
-	x	 	= rDB.get(db,'btnm'); xlabel = 'beta_N'; bins = np.linspace(0,3,31);
-	x	 	= rDB.get(db,'PTOT')*1e-6; xlabel = 'ICRH (MW)'; bins = np.linspace(0,10,51);
-	x	 	= rDB.get(db,'NBLM')*1e-6; xlabel = 'NBI (MW)'; bins = np.linspace(0,35,36);
-	x	 	= rDB.get(db,'TE0')*1e-3; xlabel = 'Te0 (keV)'; bins = np.linspace(0,12,21);
-
-	
-	if 1: ### Histogram ###
-		fig 	= plt.figure();
-		alpha 	= 0.5;
+	# Filter
+	if len(f_filter)>1:
+		for i in range(len(f_filter)-1):
+			f0 		= f_filter[i];
+			f1 		= f_filter[i+1];
+			boolF 	= np.logical_and(f_med>=f0,f_med<=f1);	
+			#boolF 	= np.logical_and(f_min>=f0,f_max<=f1);	
+			plt.hist(x[boolF],bins=bins,alpha=alpha,label=str(f0)+'-'+str(f1)+' kHz ['+str(sum(boolF))+']');
+	else:
+		plt.hist(x,bins=bins);
 		
-		# Filter
-		if len(f_filter)>1:
-			for i in range(len(f_filter)-1):
-				f0 		= f_filter[i];
-				f1 		= f_filter[i+1];
-				boolF 	= np.logical_and(f_med>=f0,f_med<=f1);	
-				#boolF 	= np.logical_and(f_min>=f0,f_max<=f1);	
-				plt.hist(x[boolF],bins=bins,alpha=alpha,label=str(f0)+'-'+str(f1)+' kHz ['+str(sum(boolF))+']');
-		else:
-			plt.hist(x,bins=bins);
-			
-		plt.xlabel(xlabel);
-		plt.legend();
-		fig.show();
-		
+	plt.xlabel(xlabel);
+	plt.legend();
+	fig.show();
 	

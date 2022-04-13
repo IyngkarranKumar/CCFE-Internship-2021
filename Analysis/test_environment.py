@@ -6,6 +6,8 @@ Examples of function use are provided below
 """
 
 if 1: ##IMPORT
+	import sys
+	sys.path.append("../")
 	import h5py as h5
 	import numpy as np
 	import pandas as pd

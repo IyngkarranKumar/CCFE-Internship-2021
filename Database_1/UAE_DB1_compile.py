@@ -13,6 +13,7 @@ if 1: ##IMPORT
 
 	import sys
 	sys.path[:0]=['/jet/share/lib/python'];
+	sys.path.append("../")
 	from ppf import *
 	import getdat
 	import numpy as np
