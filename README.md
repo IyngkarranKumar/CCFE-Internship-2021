@@ -7,7 +7,7 @@ Note from 13/04/22 - Currently in the process of refactoring code in this repo a
 ## Overview of this repository ##
 
 CCFE Final Report - A written report of internship work <br>
-Database_1 - Source code for compiling Database 1.
-Database_2 - Source code for compiling Database 2.
+Database_1 - Source code for compiling Database 1.<br>
+Database_2 - Source code for compiling Database 2.<br>
 Analysis - Source code for analysis of databases <br>
 Auxscripts - Auxilliary files used in compilation and analysis
