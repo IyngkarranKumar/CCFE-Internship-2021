@@ -1,7 +1,7 @@
 """
 The purpose of this script is to plot histograms of data from the 
 unstable AE databases.
-Alex Tinguely 220405
+
 
 """
 
