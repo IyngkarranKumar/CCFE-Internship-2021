@@ -1,5 +1,5 @@
 """
-The purpose of this script is to extract data about individual modes seen across the 
+The purpose of this script is to extract information about individual modes seen across the 
 pulses processed in the UAE DATABASE (UAEDB).
 We aim to construct a DataFRame in the UAEDB HDF5 File with the following structure:
 
