@@ -1,7 +1,7 @@
 """
 The purpose of this script is to combine pkl files and store again 
 unstable AE databases.
-Alex Tinguely 220405
+
 
 """
 
